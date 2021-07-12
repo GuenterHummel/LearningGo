@@ -127,11 +127,11 @@ func (l *Lexer) readNumber() string {
 }
 
 func isLetter(ch byte) bool {
-	return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_'
+	return ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z' || ch == '_'
 }
 
 func isDigit(ch byte) bool {
-	return '0' <= ch && ch <= '9'
+	return ch >= '0' && ch <= '9'
 }
 
 func newToken(tokenType token.TokenType, ch byte) token.Token {
