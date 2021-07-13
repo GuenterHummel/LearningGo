@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/src/golang.org/x/text" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/src/rsc.io/quote" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/src/rsc.io/sampler" vcs="Git" />
   </component>
 </project>
