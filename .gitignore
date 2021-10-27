@@ -2,3 +2,4 @@
 /src/pkg/
 /pkg/
 src/interpreter/interpreter.exe
+.DS_Store
