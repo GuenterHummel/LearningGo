@@ -11,17 +11,26 @@ type Cat struct {
 }
 
 func helloKittyHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello Kitty!")
+	_, err := fmt.Fprintf(w, "Hello Kitty!")
+	if err != nil {
+		return
+	}
 }
 
 func catAPIHandler(w http.ResponseWriter, r *http.Request) {
 	cats := make([]Cat, 1)
 	cats[0] = Cat{Name: "Ginger"}
-	json.NewEncoder(w).Encode(cats)
+	err := json.NewEncoder(w).Encode(cats)
+	if err != nil {
+		return
+	}
 }
 
 func main() {
 	http.HandleFunc("/", helloKittyHandler)
 	http.HandleFunc("/api/cats", catAPIHandler)
-	http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		return
+	}
 }
