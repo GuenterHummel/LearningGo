@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strconv"
 )
 
 type Cat struct {
@@ -27,9 +28,11 @@ func catAPIHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	const portNumber = 8080
+	fmt.Println("Starting Cats and Kittens server on localhost:" + strconv.Itoa(portNumber) + " ...")
 	http.HandleFunc("/", helloKittyHandler)
 	http.HandleFunc("/api/cats", catAPIHandler)
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":"+strconv.Itoa(portNumber), nil)
 	if err != nil {
 		return
 	}
