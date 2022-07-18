@@ -12,7 +12,7 @@ type Cat struct {
 }
 
 func helloKittyHandler(w http.ResponseWriter, r *http.Request) {
-	_, err := fmt.Fprintf(w, "Hello Kitty!")
+	_, err := fmt.Fprintf(w, "Hello Kitty!\n")
 	if err != nil {
 		return
 	}
