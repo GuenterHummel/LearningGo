@@ -19,8 +19,9 @@ func helloKittyHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func catAPIHandler(w http.ResponseWriter, r *http.Request) {
-	cats := make([]Cat, 1)
+	cats := make([]Cat, 2)
 	cats[0] = Cat{Name: "Ginger"}
+	cats[1] = Cat{Name: "Sheila"}
 	err := json.NewEncoder(w).Encode(cats)
 	if err != nil {
 		return
