@@ -4,5 +4,4 @@ use (
     ./src/hello
     ./src/interpreter 
     ./src/kitty
-    ./src/samples
 )
