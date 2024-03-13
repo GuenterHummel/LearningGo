@@ -3,3 +3,5 @@
 /pkg/
 src/interpreter/interpreter.exe
 .DS_Store
+src/samples/mars
+src/samples/lightspeed
