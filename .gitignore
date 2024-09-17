@@ -6,3 +6,4 @@ src/interpreter/interpreter.exe
 src/samples/mars
 src/samples/lightspeed
 .idea/git_toolbox_blame.xml
+/test_output/*
