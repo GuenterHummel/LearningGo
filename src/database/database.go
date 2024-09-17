@@ -3,7 +3,7 @@ package main
 import "os"
 
 func main() {
-	err := SaveData1("test_output/test.txt", []byte("Hello, World! 2"))
+	err := SaveData1("output/database/test.txt", []byte("Hello, World!"))
 	if err != nil {
 		return
 	}
