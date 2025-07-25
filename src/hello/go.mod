@@ -1,8 +1,8 @@
 module hello
 
-go 1.24.3
+go 1.24
 
-toolchain go1.24.3
+toolchain go1.24
 
 require rsc.io/quote v1.5.2
 
